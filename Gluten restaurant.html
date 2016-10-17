@@ -1,0 +1,262 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation | Welcome</title>
+   <link rel="stylesheet" href="css/foundation.css" />
+	<link rel="stylesheet" href="css/animate.css" />
+ <script src="js/vendor/modernizr.js"></script>
+ 	<link rel="stylesheet" href="stylesheets/foundation-datepicker.css" />
+ <script src="js/foundation-datepicker.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Norican' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/style.css">
+
+  </head>
+  <body>
+  <div class="row">
+    <!-- Navigation -->
+    <div class="contain-to-grid sticky">
+
+      <nav class="top-bar" data-topbar>
+        <ul class="title-area">
+          <li class="name">
+            <h1><a class="logo show-for-small-only" href="#"><img src="http://placehold.it/50x50" /></a></h1>
+          </li>
+          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+        </ul>
+
+        <section class="top-bar-section">
+
+          <div class="logo-wrapper hide-for-small-only">
+            <div class="logo">
+              <img src="img/kitchen-158988_640.png">
+            </div>
+          </div>
+
+          <!-- Right Nav Section -->
+          <ul class="right">
+		    <li ><h4 class="bakery"> Bakery</h4></li>
+            <li><a href="#menu-click">Menu </a></li>
+            <li><a href="#reservation-click">Reservation</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+
+          <!-- Left Nav Section -->
+          <ul class="left">
+		  <li ><h4 class="bakery">T. K .</h4></li>
+		  <li>
+			<a href="#loyal-customer">Loyal Customer</a></li>
+            <li>
+              <a href="#welcome">About us</a>
+              
+			  
+            </li>
+            <li>
+              <a href="#">Home</a>      
+            </li>
+			
+          </ul>
+
+        </section>
+      </nav>
+
+    </div><!-- /navigation -->
+	</div>
+	<hr />
+	<div class="row">
+	  
+      <div class="large-8 columns animated lightSpeedIn" id="div-welcome">
+	  <h1 id="welcome" >Welcome to our Restaurant!</h1>
+	  </div>
+	 
+	 
+	</div>
+   <hr />
+   <div class="row" >
+		
+      <div class="large-10 columns" id="about">
+	  <h2>About us!</h2>
+	  <p>We are the new restaurant, we serve simple lunch or dinner menu items for the casual dinner who is gluten and/or wheat-free.
+	  We also making baked good from breads to muffins and pastries. You can make reservation online for your lunch and dinner. </p>
+
+
+
+	  
+	  </div>
+	  
+	 <div class="large-12 columns">
+		 
+	   <div id="moreinformation" class="reveal-modal" data-reveal>
+		 
+		    <h2 class="font">Testimonials</h2>
+			<h4><strong>Steve </strong></h4>
+			<p>"I very satisfied about this restaurant. They serve good food and good bread. I love to come here buy their breads."</p>
+			<h4><strong>Stephanie </strong></h4>
+			<p>"The foods are great."</p>
+			<h4><strong>Frank </strong></h4>
+			<p>"I love the breads here. It so good that it make me want to eat it everyday."</p>
+			
+		    <a class="close-reveal-modal" href="#">X</a>
+		 
+		 
+		 </div>
+		 <a class="button round animated wobble " href="#" data-reveal-id="moreinformation" id="menu-click"> Some Testimonials!</a>
+	 </div>
+	</div>
+	<hr />
+	<div class="row" id="menu">
+		<div class="large-12 columns">
+		<h2 class="font">Menu</h2>
+		<ul class="large-block-grid-4">
+	      <li class="pic-width imgheight"><img src="img/Peanut-Butter-Chocolate-Chip-Cookies_0003.jpg" /></li>
+		  <li class="pic-width imgheight"><img src="img/muffin-dulce-de-leche.jpg" /></li>
+		  <li class="pic-width imgheight"><img src="img/bread.jpg" /></li>
+		  <li class="pic-width imgheight" id="reservation-click"><img src="img/breakfast-croissant-7-h-fd669b32-7413-4ba8-834a-f8aa9e8a714d-0-472x310.gif" /></li>
+	   </ul>
+		
+		
+	</div>
+	</div>
+	<hr />
+	<!-- /Reservation -->
+	<?php
+
+include "db_connect.php";
+include "Reservation_form.php";
+?>
+	<form action= "add_reservation.php">
+  <div class="row">
+    <div class="large-8 columns" id="div-reservation">
+	  <h2 id="welcome" >Reservation</h2>
+	  </div>
+    
+  </div>
+  <div class="row">
+    <div class="large-4 columns">
+      <label for="newfn">First Name</label>
+        <input id="newfn" name="newfn" type="text" placeholder="Your first name" />
+      
+    </div>
+    <div class="large-4 columns">
+      <label for="newln">Last Name
+        <input id="newln" name="newln" type="text" placeholder="Your last name" />
+      </label>
+    </div>
+    <div class="large-4 columns">
+      <div class="row collapse">
+        <label for="newmn">Middle Name</label>
+        <div class="small-9 columns">
+          <input id="newmn" name="newmn" type="text" placeholder="Optional" />
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    
+     <div class="large-4 columns">
+      <label for="mealre">Choose Your Meal</label>
+      <input type="radio" name="mealtype" value="Lunch" id="mealtypeLuch"><label for="pokemonRed">Lunch</label>
+      <input type="radio" name="mealtype" value="Dinner" id="mealtypeDinner"><label for="pokemonBlue">Dinner</label>
+    </div>
+	
+	
+   <div class="large-4 columns">
+      <div class="row collapse">
+        <label for="timere">Time</label>
+        <div class="small-9 columns">
+          <input type="text" class="span2" value="" id="dpt">
+
+        </div>
+        
+      </div>
+    </div>
+	
+	
+	
+	
+	<div class="large-4 columns">
+      <div class="row collapse">
+        <label for="peoplere">How many people</label>
+        <div class="small-9 columns">
+          <input id="peoplere" name="peoplere" type="text" placeholder="" />
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-11 columns">
+      <label for="commentre">Comment
+        <textarea id="commentre" name="commentre" placeholder="Type your comment..."></textarea>
+      </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
+	<label for="submit"></label>
+		<a name="submit" class="button small" id="submit">Submit</a>
+    </div>
+  </div>
+</form>
+	<hr />
+	<div class="row">
+		<div class="large-10 columns" id="loyal-customer">
+		    <h2 class="font">Loyal Customer</h2>
+			<p> We are having a loyalty customer program. We will give you a card when you come to our restaurant. You will have some bonus if
+			you come to us usually.</p>
+	</div>
+	</div>
+	<hr />
+	<div class="row" id="contact">
+	  <div class="large-12 columns">
+			<h2 id="End" class="font">Contact:</h2>
+			<p>Email: tkrestaurant@gmail.com <br>
+			   Phone: 326-236-1356<br>
+			   Fax:   326-236-1358<br>
+			   Address: T.K. Restaurant, 1563 W 111th, Glendale, AZ 85362
+			         
+	
+		</div>
+		</div>
+		<hr />
+	
+
+
+
+	<script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+
+	<script src="js/vendor/jquery.cookie.js"></script>
+	<script src="js/foundation/foundation.equalizer.js"></script>
+	<script src="js/foundation-datepicker.js"></script>
+
+	<script>
+$('.fdatepicker').fdatepicker({
+  language: 'sk'
+});
+
+$(function(){
+  $('#dpt').fdatepicker({
+		format: 'mm-dd-yyyy hh:ii',
+		disableDblClickSelection: true,
+		language: 'vi',
+		pickTime: true
+	});
+});
+</script>
+
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
